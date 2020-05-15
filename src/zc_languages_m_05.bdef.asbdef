@@ -1,0 +1,25 @@
+projection;
+
+define behavior for ZC_LANGUAGES_M_05 alias LanguageProcessor
+use etag
+{
+  // scenario specific field control
+
+  use create;
+  use update;
+  use delete;
+
+  use action markFav;
+  use action unmarkFav;
+    use association _Features { create; }
+
+
+}
+
+
+define behavior for ZC_FEATURES_05 alias FeatureProcessor
+use etag
+{
+ use update;
+ use delete;
+}
